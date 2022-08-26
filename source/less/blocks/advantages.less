@@ -7,6 +7,7 @@
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages__title--primary {
@@ -22,6 +23,13 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  display: grid;
+  grid-template-columns: 320px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 256px 256px 256px;
+    grid-template-rows: 256px 256px 256px 256px;
+  }
 }
 
 .advantages__item {

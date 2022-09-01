@@ -1,3 +1,24 @@
-.map__image {
+.map {
+  display: flex;
+  justify-content: center;
+  min-height: 350px;
+  max-width: @mobile-width;
   background-color: #e2ebc7;
+  background-image: url("/img/map.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
+}
+
+.map__marker {
+  align-self: center;
 }

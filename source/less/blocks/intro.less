@@ -1,5 +1,29 @@
 .intro {
+  max-width: @mobile-width;
+  min-height: 389px;
   background-color: #7691a4;
   background-image: url("/img/intro-background.jpg");
   background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 90px;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
+}
+
+.intro__text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.intro__decoration {
+  display: block;
+  margin-top: auto;
 }

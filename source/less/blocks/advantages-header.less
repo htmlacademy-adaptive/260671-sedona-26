@@ -1,5 +1,22 @@
+.advantages-header {
+  min-height: 221px;
+  padding-top: 39px;
+  padding-left: 32px;
+  padding-right: 32px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 206px;
+    padding-top: 47px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 59px;
+  }
+}
+
 .advantages-header__title {
   margin: 0;
+  margin-bottom: 32px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
@@ -7,6 +24,7 @@
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .advantages-header__description {
@@ -18,4 +36,5 @@
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
+  text-align: center;
 }

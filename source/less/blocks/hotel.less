@@ -1,14 +1,21 @@
 .hotel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: @mobile-width;
+  min-height: 287px;
   background-color: #ffffff;
   box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 
   @media (min-width: @tablet-width) {
     max-width: @tablet-width;
+    min-height: 318px;
   }
 
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
+    min-height: 331px;
   }
 }
 
@@ -21,10 +28,12 @@
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .hotel__text {
   margin: 0;
+  margin-bottom: 32px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
@@ -32,18 +41,13 @@
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .hotel__button {
-  margin: 0;
-  padding: 0;
+  width: 284px;
 
-  font-family: "PT Sans", sans-serif;
-  font-size: 21px;
-  line-height: 26px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
-  background-color: #81b3d2;
-  border: none;
+  @media (min-width: @tablet-width) {
+    width: 458px;
+  }
 }

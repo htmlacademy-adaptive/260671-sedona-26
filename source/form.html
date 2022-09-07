@@ -12,7 +12,7 @@
         <a class="main-header__logo" href="index.html">
           <img src="img/logo.svg" width="185" height="96" alt="Городок Седона.">
         </a>
-        <nav class="main-nav main-nav--closed">
+        <nav class="main-nav main-nav--opened">
           <button class="main-nav__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
           </button>
@@ -25,7 +25,7 @@
                 <a class="main-nav__link" href="catalog.html">Фото и видео</a>
               </li>
               <li class="main-nav__item">
-                <a class="main-nav__link main-nav__link--current" href="form.html">Форма отзыва</a>
+                <a class="main-nav__link main-nav__link--current" href="#">Форма отзыва</a>
               </li>
               <li class="main-nav__item">
                 <a class="main-nav__link" href="https://htmlacademy.ru">Html Academy</a>
@@ -94,28 +94,40 @@
             </fieldset>
             <fieldset class="feedback__fieldset feedback__fieldset--attractions feedback-attraction">
               <legend class="feedback__text">Посещенные достопримечательности:</legend>
-              <ul class="feedback__list feedback-attraction__list">
-                <li class="feedback-attraction__item">
-                  <input class="feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-1" value="1" checked>
-                  <label class="feedback__label-checkbox" for="feedback-attraction-1">Мост Дьявола</label>
+              <ul class="feedback__list feedback__list--attraction">
+                <li class="feedback__item--attraction">
+                  <label class="feedback__label-checkbox" for="feedback-attraction-1">
+                    <input class="visually-hidden feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-1" value="1" checked>
+                    <span class="feedback__mark"></span>
+                    <span class="feedback__label--attraction">Мост Дьявола</span>
+                  </label>
                 </li>
-                <li class="feedback-attraction__item">
-                  <input class="feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-2" value="2" checked>
-                  <label class="feedback__label-checkbox" for="feedback-attraction-2">Гора-Колокол</label>
+                <li class="feedback__item--attraction">
+                  <label class="feedback__label-checkbox" for="feedback-attraction-2">
+                    <input class="visually-hidden feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-2" value="2" checked>
+                    <span class="feedback__mark"></span>
+                    <span class="feedback__label--attraction">Гора-Колокол</span>
+                  </label>
                 </li>
-                <li class="feedback-attraction__item">
-                  <input class="feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-3" value="3" checked>
-                  <label class="feedback__label-checkbox" for="feedback-attraction-3">Слайд-парк</label>
+                <li class="feedback__item--attraction">
+                  <label class="feedback__label-checkbox" for="feedback-attraction-3">
+                    <input class="visually-hidden feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-3" value="3" checked>
+                    <span class="feedback__mark"></span>
+                    <span class="feedback__label--attraction">Слайд-парк</span>
+                  </label>
                 </li>
-                <li class="feedback-attraction__item">
-                  <input class="feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-4" value="4">
-                  <label class="feedback__label-checkbox" for="feedback-attraction-4">Красные скалы</label>
+                <li class="feedback__item--attraction">
+                  <label class="feedback__label-checkbox" for="feedback-attraction-4">
+                    <input class="visually-hidden feedback__input-checkbox" type="checkbox" name="feedback-attractions" id="feedback-attraction-4" value="4">
+                    <span class="feedback__mark"></span>
+                    <span class="feedback__label--attraction">Красные скалы</span>
+                  </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="feedback__fieldset feedback__fieldset--emotions feedback-emotions">
               <legend class="feedback__text">Опишите свои эмоции:</legend>
-              <textarea class="feedback__textarea feedback-emotions__textarea" name="feedback-emotions-field" id="feedback-emotions" cols="30" rows="10">Опишите подробно все свои восторги</textarea>
+              <textarea class="feedback__textarea feedback-emotions__textarea" name="feedback-emotions-field" id="feedback-emotions" cols="30" rows="4">Опишите подробно все свои восторги</textarea>
             </fieldset>
             <button class="feedback__button button button__primary button__form" type="submit">Отправить отзыв</button>
             <span class="feedback__form--required">* — обязательные поля</span>
@@ -167,6 +179,7 @@
         </div>
       </footer>
     </div>
+    <script src="js/menu-toggle.js"></script>
   </body>
 
 </html>

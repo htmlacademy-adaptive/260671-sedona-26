@@ -151,6 +151,7 @@
 .feedback__list--attraction {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 16px 0;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -244,6 +245,7 @@
 .feedback__list--impression {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 16px 0;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: 1fr 1fr;
@@ -371,6 +373,7 @@
 
 .feedback__textarea {
   box-sizing: border-box;
+  width: 100%;
   max-width: 279px;
   min-height: 150px;
   margin: 0;
@@ -417,6 +420,8 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    grid-column: 1 / 3;
+    grid-column: 2 / 3;
+    margin: auto;
+    margin-right: 0;
   }
 }

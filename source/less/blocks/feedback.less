@@ -145,12 +145,15 @@
 }
 
 .feedback__list--attraction {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -229,16 +232,92 @@
   flex-direction: column;
 }
 
+// IMPRESSION FIELDSET
+
+.feedback__list--impression {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.feedback__item--impression {
+  min-height: 46px;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+}
+
+.feedback__item--impression:last-child {
+  margin-bottom: 0;
+}
+
+.feedback__label-radio {
+  position: relative;
+  display: block;
+  padding-left: 62px;
+  margin: 0;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.feedback__input-radio[type="radio"]:checked + .feedback__mark--impression::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 15px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+
+.feedback__mark--impression {
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 46px;
+  height: 46px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.feedback__label-radio:hover .feedback__mark--impression {
+  background-color: #e5e5e5;
+}
+
+// ATTRACTIONS FIELDSET
+
 .feedback__item--attraction {
   min-height: 46px;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .feedback__item--attraction:last-child {
   margin-bottom: 0;
 }
 
-.feedback__label-radio {
+.feedback__label-checkbox {
+  position: relative;
+  display: block;
+  padding-left: 62px;
   margin: 0;
 
   font-family: "PT Sans", sans-serif;
@@ -248,17 +327,8 @@
   color: #000000;
 }
 
-.feedback__label-checkbox {
-  position: relative;
-  display: block;
-  padding-left: 46px;
-  margin: 0;
-
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: #000000;
+.feedback__label-checkbox:hover .feedback__mark--attraction {
+  background-color: #e5e5e5;
 }
 
 .feedback__label--attraction {
@@ -271,18 +341,16 @@
   color: #000000;
 }
 
-.feedback__input-checkbox[type="checkbox"]:checked + .feedback-mark::before,
-.feedback__input-checkbox[type="checkbox"]:checked + .feedback-mark::after {
+.feedback__input-checkbox[type="checkbox"]:checked + .feedback__mark--attraction::after {
+  content: url("/img/tick.svg");
   position: absolute;
-  top: 7px;
-  left: 2px;
-  width: 12px;
-  height: 2px;
-  background-color: #242424;
-  content: "";
+  display: block;
+  top: 15px;
+  left: 12px;
+  fill: #000000;
 }
 
-.feedback__mark {
+.feedback__mark--attraction {
   position: absolute;
   top: 2px;
   left: 0;
@@ -291,6 +359,8 @@
   background-color: #f2f2f2;
   border-radius: 4px;
 }
+
+//EMOTIONS FIELDSET
 
 .feedback__textarea {
   box-sizing: border-box;
@@ -306,6 +376,14 @@
   line-height: 26px;
   font-weight: 700;
   color: #0000004d;
+
+  @media (min-width: @tablet-width) {
+    max-width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 768px;
+  }
 }
 
 .feedback__textarea:hover {

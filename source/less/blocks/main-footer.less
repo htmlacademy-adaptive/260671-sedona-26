@@ -69,8 +69,10 @@
   background-color: #669ec0;
 }
 
+.main-footer__social-button:focus,
 .main-footer__social-button:active {
   background-color: #5496bd;
+  outline: none;
 }
 
 .main-footer__social-icon {
@@ -78,8 +80,10 @@
   fill: #ffffff;
 }
 
+.main-footer__social-button:focus .main-footer__social-icon,
 .main-footer__social-button:active .main-footer__social-icon {
   fill: fade(#ffffff, 30%);
+  outline: none;
 }
 
 .main-footer__developer {
@@ -96,10 +100,16 @@
   text-align: center;
 }
 
+.main-footer__developer:focus,
+.main-footer__developer:active {
+  outline: none;
+}
+
 .main-footer__developer:hover .main-footer__developer--text {
   color: #81b3d2;
 }
 
+.main-footer__developer:focus .main-footer__developer--text,
 .main-footer__developer:active .main-footer__developer--text {
   color: #b3b3b3;
 }
@@ -108,6 +118,7 @@
   fill: #81b3d2;
 }
 
+.main-footer__developer:focus .main-footer__developer--icon,
 .main-footer__developer:active .main-footer__developer--icon {
   fill: #b3b3b3;
 }

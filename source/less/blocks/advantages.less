@@ -1,5 +1,4 @@
 .advantages {
-  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
   max-width: @mobile-width;
   background-color: #ffffff;
 
@@ -10,27 +9,6 @@
   @media (min-width: @desktop-width) {
     max-width: @desktop-width;
   }
-}
-
-.advantages__title {
-  margin: 0;
-
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-  text-align: center;
-}
-
-.advantages__title--primary {
-  font-family: "PT Sans", sans-serif;
-  font-size: 18px;
-  line-height: 26px;
-  font-weight: 700;
-  color: #ffffff;
-  text-transform: uppercase;
 }
 
 .advantages__list {
@@ -53,7 +31,11 @@
 
 .advantages__item {
   background-color: #eeeeee;
-  min-height: 256px;
+  min-height: 167px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 256px;
+  }
 }
 
 .advantages__item--1 {
@@ -79,7 +61,71 @@
 }
 
 .advantages__item--primary {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  align-items: center;
   background-color: #81b3d2;
+
+  @media (min-width: @tablet-width) {
+    padding: 36px;
+  }
+}
+
+.advantages__item--secondary {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 36px;
+  }
+}
+
+.advantages__item--features {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 36px;
+  }
+}
+
+.advantages__icon--features {
+  display: block;
+  margin-bottom: 27px;
+  order: -1;
+}
+
+.advantages__title {
+  margin: 0;
+  margin-bottom: 11px;
+
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.advantages__title--primary {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  text-transform: uppercase;
 }
 
 .advantages__image {
@@ -104,6 +150,7 @@
 
 .advantages__number {
   margin: 0;
+  margin-bottom: 17px;
 
   font-family: "PT Sans", sans-serif;
   font-size: 14px;

@@ -1,4 +1,7 @@
 .intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: @mobile-width;
   min-height: 389px;
   background-color: #7691a4;
@@ -26,4 +29,15 @@
 .intro__decoration {
   display: block;
   margin-top: auto;
+  object-fit: cover;
+  object-position: center;
+  max-width: @mobile-width;
+
+  @media (min-width: @tablet-width) {
+    max-width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: @desktop-width;
+  }
 }
